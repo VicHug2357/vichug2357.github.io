@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentacion: Restricciones de Rechazo en Bases de Datos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/theme/white.min.css">
+    <style>
+        * {
+            background-color: #cfe1f5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Consultar una tabla y Agrupar filas en MySQL</h1>
+            </section>
+
+            <section>
+                <h2>Consultar una tabla</h2>
+                <ul>
+                    <li><strong>Comandos:</strong> Consultar una tabla 
+                        SELECT * FROM ...
+                        SELECT ... FROM ...
+                        SELECT ... AS ... FROM...
+                        SELECT DISTINCT ... FROM ... SELECT ... FROM ... WHERE... SELECT ... FROM ... WHERE ... AND ... SELECT ... FROM ... LIMIT ... , ... ;
+                        Si queremos mostrar todos los registros de una tabla usaremos SELECT * FROM y el nombre de la tabla. Por ejemplo: </li>
+                </ul>
+            </section>
+           
+            <section>
+            <div class="slide">
+                <h2></h2>
+                <p></p>
+                <div class="image-container">
+                    <img src="imagen1.jpg" alt="Imagen 1">
+                </div>
+            </div>
+            </section>
+           
+            <section>
+                <h2>Introducción</h2>
+                <ul>
+                    <li><strong></strong> En esta instrucción la expresión * (asterisco) significa “todas las columnas”. Podemos realizar una consulta donde se nos muestre solo las columnas que nos interesa. Para ello usaremos SELECT más las columnas que queremos separadas por coma:</li>
+                </ul>
+            </section>
+          
+            <section>
+                <div class="slide">
+                    <h2></h2>
+                    <p></p>
+                    <div class="image-container">
+                        <img src="Imagen2.jpg" alt="Imagen 2">
+                    </div>
+                </div>
+                </section>
+            <section>
+                <h2></h2>
+                <p>También podemos operar con los valores de una columna, por ejemplo si queremos que nos
+                    devuelvan la población en miles pondríamos lo siguiente:</p>
+            </section>
+
+            <section>
+                <h2></h2>
+                <ul>
+                    <li><strong></strong>Recuerda que la información en la tabla no se modifica. Lo único que pedimos es mostrar un valor calculado a partir de la información de la tabla.
+                        También podríamos mostrar la misma información pero cambiando el encabezado de la columna afectada con el comando AS:</li>
+                </ul>
+            </section>
+            <section>
+                <div class="slide">
+                    <h2></h2>
+                    <p></p>
+                    <div class="image-container">
+                        <img src="Imagen3.jpg" alt="Imagen 3">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2></h2>
+                <ul>
+                    <li><strong></strong>Puedes conocer todos las funciones numéricas en MySQL con el comando: mysql>HELP NUMERIC FUNCTIONS
+                        O de cualquier tipo de función con: mysql>HELP FUNCTIONS
+                          
+                        En una consulta podría haber registros repetidos, si quisiéramos evitar mostrar las filas repetidas
+                        usaríamos el comando DISTINCT.</li>
+                </ul>
+            </section>
+            <section>
+                <div class="slide">
+                    <h2></h2>
+                    <p></p>
+                    <div class="image-container">
+                        <img src="Imagen4.jpg" alt="Imagen 4">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2></h2>
+                <ul>
+                    <li><strong></strong>Incluso anidar 2 condiciones usando el comando AND:
+                        Además de AND, podríamos usar otros operadores booleanos como OR, XOR o NOT Recuerda que puedes ver e informarte sobre los operadores booleanos disponibles con el comando:
+                        HELP LOGICAL OPERATORS
+                        </li>
+                </ul>
+            </section>
+            <section>
+                <div class="slide">
+                    <h2></h2>
+                    <p></p>
+                    <div class="image-container">
+                        <img src="Imagen5.jpg" alt="Imagen 5">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2></h2>
+                <ul>
+                    <li><strong></strong>Recuerda que aunque se muestren 3 registros, en la tabla hay 4 registros dado que “Madrid 4000000” está repetido.
+
+                        Si queremos filtrar las filas que aparecen en la consulta podemos usar la sentencia WHERE, por ejemplo, partiendo de la tabla siguiente, queremos mostrar solo las ciudades que tienen 2 o más millones de población:</li>
+                </ul>
+            </section>
+            <section>
+                <div class="slide">
+                    <h2></h2>
+                    <p></p>
+                    <div class="image-container">
+                        <img src="Imagen6.jpg" alt="Imagen 6">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2></h2>
+                <ul>
+                    <li><strong></strong> La cláusula LIMIT puede usarse con 2 parámetros. Cuando se usan ambos, el primero muestra la fila a partir de la que debemos empezar a mostrar registros, y el segundo parámetro muestra el número de filas a mostrar (contando desde la primera):</li>
+                </ul>
+            </section>
+            <section>
+                <div class="slide">
+                    <h2></h2>
+                    <p></p>
+                    <div class="image-container">
+                        <img src="Imagen7.jpg" alt="Imagen 7">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Conclusiones</h2>
+                <p>En conclusión, la comprensión de las consultas en MySQL y las restricciones de verificación es crucial para manejar eficientemente grandes conjuntos de datos. Las consultas bien construidas y las restricciones aplicadas adecuadamente pueden mejorar significativamente la precisión y la eficiencia de las operaciones en una base de datos.</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize();
+    </script>
+</body>
+
+</html>
